@@ -26,7 +26,7 @@ library(tbrw)
 
 ## Getting help
 
-To get get, you can call
+To get help, you can call
 
 ```r
 ?tbrw
