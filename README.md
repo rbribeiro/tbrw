@@ -12,7 +12,7 @@ You can install the development version of `tbrw` from [GitHub](https://github.c
 # Install devtools if you haven't already
 # install.packages("devtools")
 
-# Install myPackage
+# Install tbrw
 devtools::install_github("rbribeiro/tbrw")
 
 
