@@ -14,6 +14,22 @@ You can install the development version of `tbrw` from [GitHub](https://github.c
 
 # Install tbrw
 devtools::install_github("rbribeiro/tbrw")
+```
 
+## Usage
+
+To use it, just import the library
+
+```r
+library(tbrw)
+```
+
+## Getting help
+
+To get get, you can call
+
+```r
+?tbrw
+```
 
 
