@@ -13,8 +13,8 @@ tbrw.with_vertex_seq(steps = 100, vertex_seq = rep(1, 100))
 \item{vertex_seq}{a vector of the number of vertices to be add at each step}
 }
 \value{
-A list with the tree, walker position, total number of vertices
-and distance after \code{steps}
+A list with the tree, walker position, total number of vertices,
+degree sequence saw by the walker, and distance after \code{steps}
 }
 \description{
 Simulate a TBRW instance with a given number of
