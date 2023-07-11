@@ -86,7 +86,7 @@ add_vectors <- function(v1, v2) {
 #' @export
 bgrw.average <- function(iterations = 100, steps = 100, p_values = c(0.25,0.5,0.75,1)) {
   p_length <- length(p_values)
-  av_speed <- rep(0,p_length)
+  av_distance <- rep(0,p_length)
   av_deg_profile <- rep(list(0),p_length)
 
   pb <- txtProgressBar(0,p_length, style = 3)
@@ -96,10 +96,10 @@ bgrw.average <- function(iterations = 100, steps = 100, p_values = c(0.25,0.5,0.
     p <- p_values[j]
     for(i in 1:iterations) {
       results <- bgrw(steps, p)
-      av_speed[j] <- av_speed[j] + results$distance/(steps*iterations)
+      av_distance[j] <- av_distance[j] + results$distance/(steps*iterations)
       av_deg_profile[[j]] <- add_vectors(av_deg_profile[[j]], results$degree_profile/(steps*iterations))
     }
 
   }
-  return(list(av_speed = av_speed, av_deg_profile = av_deg_profile))
+  return(list(av_distance = av_distance, av_deg_profile = av_deg_profile))
 }
